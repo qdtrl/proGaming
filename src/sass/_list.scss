@@ -1,0 +1,45 @@
+.page-list {
+  height: 100vh;
+  .articles {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 80vw;
+    margin-left: 10%;
+    margin-bottom: 2rem;
+    .cardGame {
+      bottom: 1rem;
+      left: 1rem;
+      margin-bottom: 1rem;
+      img {
+        width: 450px;
+        height: 300px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+      }
+      h1 {
+        font-size: 1.2rem;
+        margin-top: 0.3rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .platform {
+        display: flex;
+        img {
+          margin-right: 1rem;
+          width: 30px;
+          height: 30px;
+          box-shadow: none;
+        }
+      }
+    
+      a {
+        padding: 0.4rem;
+        @include transition-ease;
+    
+        &:hover {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import 'config';
+@import 'loader';
+@import 'jumbotron';
+@import 'menu';
+@import 'list';
+
+body {
+  background-color: $primary-color;
+  color: set-text-color($primary-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+h1, h2, h3 {
+  font-weight: 400;
+}
+
+a {
+  color: set-text-color($primary-color);
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+}
+
+
+main {
+  width: 100vw;
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: set-text-color($primary-color);
+  span {
+    color: $secondary-color;
+  }
+}
