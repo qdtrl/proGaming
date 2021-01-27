@@ -1,4 +1,4 @@
-const PageList = (argument = "") => {
+const SearchPage = (argument = "") => {
   const preparePage = () => {
     let cleanedArgument = argument.replace(/\s+/g, "-");
     let articles = "";
@@ -35,7 +35,8 @@ const PageList = (argument = "") => {
     const fetchList = (url, argument) => {
       let finalURL = url;
       if (argument) {
-        finalURL = url + "?search=" + argument;
+        finalURL = url + '?search=' + argument + '&page_size=9'
+        ;
       }
 
       fetch(`${finalURL}`)
@@ -44,7 +45,7 @@ const PageList = (argument = "") => {
           response.results.forEach((article) => {
             articles += `
                   <div class="cardGame">
-                    <img src="${article.background_image}" alt="${article.slug}">
+                    <a href = "#pagedetail/${article.id}"><img src="${article.background_image}" alt="${article.slug}"></a>
                     <h1>${article.name}</h1>
                     <div class="platform">
                       ${imagePlatforms(article.parent_platforms)}
@@ -63,8 +64,9 @@ const PageList = (argument = "") => {
     pageContent.innerHTML = `
       <section class="page-list" style="justify-content: center;">
         <div class="articles">
-          <span class="loader"></span>
-          Chargement...
+          <div class="loader">
+            <span class="loader-icon"></span> Chargement...
+          </div>
         </div>
       </section>
     `;
@@ -74,4 +76,4 @@ const PageList = (argument = "") => {
   render();
 };
 
-export {PageList};
+export {SearchPage};

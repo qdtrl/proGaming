@@ -2,12 +2,11 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .loader {
   margin-top: 2rem;
-  display: flex;
-  text-align: center;
 }
 .loader .loader-icon {
   width: 50px;
@@ -59,8 +58,8 @@
   justify-content: center;
   text-align: center;
   margin-bottom: 2rem;
-  background-image: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url(images/eddbe9bb12206adff93764c0a7459908.jpeg);
   background-size: cover;
+  background-image: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3)), url(images/eddbe9bb12206adff93764c0a7459908.jpeg);
 }
 .jumbotron h1 {
   font-size: 5rem;
@@ -197,17 +196,36 @@
   margin-bottom: 2rem;
 }
 .page-list .articles .cardGame {
+  display: flex;
+  flex-direction: column;
+  width: 420px;
   bottom: 1rem;
   left: 1rem;
   margin-bottom: 1rem;
 }
+.page-list .articles .cardGame:hover img.game {
+  visibility: hidden;
+}
+.page-list .articles .cardGame div.infos {
+  position: absolute;
+  width: 420px;
+}
+.page-list .articles .cardGame div.infos p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.page-list .articles .cardGame div.infos p.tags {
+  font-size: 0.8rem;
+}
 .page-list .articles .cardGame img {
-  width: 450px;
-  height: 300px;
+  z-index: 1;
+  width: 420px;
+  height: 280px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
 }
 .page-list .articles .cardGame h1 {
   font-size: 1.2rem;
+  font-weight: 400;
   margin-top: 0.3rem;
   margin-bottom: 0.3rem;
 }
@@ -226,6 +244,104 @@
 }
 .page-list .articles .cardGame a:hover {
   color: #ff652f;
+}
+
+.details-jumbotron {
+  position: relative;
+}
+.details-jumbotron img {
+  width: 100vw;
+}
+.details-jumbotron a {
+  padding: 12px 20px;
+  background-color: #cc0000;
+  position: absolute;
+  bottom: 6rem;
+  right: 6rem;
+}
+
+section.details {
+  width: 100vw;
+  padding: 3rem;
+  margin-bottom: 1rem;
+}
+section.details div.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+section.details div.title p {
+  font-size: 2rem;
+  color: #cc0000;
+}
+section.details h1 {
+  font-size: 4rem;
+}
+section.details h2 {
+  text-transform: uppercase;
+  color: #cc0000;
+  font-weight: 600;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+section.details h3 {
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+section.details p {
+  margin-bottom: 1.2rem;
+}
+section.details div.plot p h1, section.details div.plot p h2, section.details div.plot p h3 {
+  font-size: 1rem;
+}
+section.details div.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+section.details div.about div.half {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+}
+section.details div.about div.half div {
+  width: 50%;
+}
+section.details div.types {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+section.details div.types div.tags {
+  width: 60%;
+}
+section.details div.stores a {
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+section.details div.stores a:hover {
+  text-decoration: underline red 2px;
+}
+section.details div.screenshots {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 80vw;
+  margin-left: 10%;
+}
+section.details div.screenshots h2 {
+  position: absolute;
+}
+section.details div.screenshots .cardGame {
+  width: 420px;
+  margin-bottom: 2rem;
+}
+section.details div.screenshots .cardGame img {
+  width: 420px;
 }
 
 body {
