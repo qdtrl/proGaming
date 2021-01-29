@@ -1,4 +1,4 @@
-import {fillCardGame} from './function';
+import {fillCardGame, showMore} from './function';
 
 const Home = (argument = "") => {
   const preparePage = () => {
@@ -36,6 +36,7 @@ const Home = (argument = "") => {
         </div>
       </div>
     </section>
+    <button class="show">+</button>
     `;
     preparePage();
   };
@@ -48,6 +49,10 @@ const Home = (argument = "") => {
     e.preventDefault();
     window.location.hash = `search/${searchInput.value}`;
   })
+
+  const more = document.querySelector('.show');
+
+  more.addEventListener('click', e => showMore(e));
 };
 
 export {Home};

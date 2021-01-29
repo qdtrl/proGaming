@@ -34,6 +34,20 @@ main {
   width: 100vw;
 }
 
+button.show {
+  left: 20vw;
+  bottom: 1rem;
+
+  width: 20%;
+  padding: 10px;
+  background: $secondary-color;
+  color: $primary-color;
+  font-size: 17px;
+  border: 1px solid $secondary-color;
+  border-left: none;
+  cursor: pointer;
+}
+
 footer {
   font-size: 1rem;
   position: fixed;

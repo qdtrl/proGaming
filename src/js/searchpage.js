@@ -1,4 +1,4 @@
-import {arrayInString, imagePlatforms, fillCardGame} from './function';
+import {showMore, fillCardGame} from './function';
 
 const SearchPage = (argument = "") => {
   const preparePage = () => {
@@ -32,11 +32,15 @@ const SearchPage = (argument = "") => {
           </div>
         </div>
       </section>
+      <button class="show">+</button>
     `;
 
     preparePage();
   };
   render();
+  const more = document.querySelector('.show');
+
+  more.addEventListener('click', e => showMore(e));
 };
 
 export {SearchPage};

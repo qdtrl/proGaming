@@ -51,7 +51,7 @@ const dateInString = released => {
 const fillCardGame = games => {
   let articles = "";
   games.forEach((game, index) => {
-    if (index < 6) {
+    if (index < 9) {
       articles += `
         <a class="card" href="#detail/${game.id}">`;
     } else {
@@ -79,13 +79,21 @@ const fillCardGame = games => {
   return articles;
 }
 
-const showMore = () => {
-  const links = document.querySelectorAll('a .card .hide');
+const showMore = (e) => {
+  e.preventDefault();
+  const links = document.querySelectorAll('.card.hide');
+  console.log(links);
+
   links.forEach((link, value) => {
-    if (value === 5) {
+    if (value >= 9) {
       return;
     }
     link.classList.remove('hide');
   })
+  if (links.length === 9) {
+    document.querySelector('.show').innerHTML= "";
+  }
 };
-export {arrayInString, arrayInLink, imagePlatforms, dateInString, fillCardGame};
+
+
+export {arrayInString, showMore, arrayInLink, imagePlatforms, dateInString, fillCardGame};
