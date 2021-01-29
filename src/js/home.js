@@ -1,5 +1,4 @@
 import {fillCardGame} from './function';
-import {routes} from './routes';
 
 const Home = (argument = "") => {
   const preparePage = () => {
@@ -41,13 +40,13 @@ const Home = (argument = "") => {
     preparePage();
   };
   render();
-  var searchInput = document.querySelector('form input');
-  var searchButton = document.querySelector('form button');
+  var searchInput = document.querySelector('.searchInput');
+  var searchButton = document.querySelector('.searchButton');
 
 
   searchButton.addEventListener('click', e => {
     e.preventDefault();
-    routes["search"](searchInput.value);
+    window.location.hash = `search/${searchInput.value}`;
   })
 };
 

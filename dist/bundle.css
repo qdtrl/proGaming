@@ -199,6 +199,9 @@
   margin-left: 10%;
   margin-bottom: 2rem;
 }
+.page-list .articles a.card.hide {
+  display: none;
+}
 .page-list .articles .cardGame {
   display: flex;
   flex-direction: column;

@@ -50,9 +50,15 @@ const dateInString = released => {
 
 const fillCardGame = games => {
   let articles = "";
-  games.forEach((game) => {
+  games.forEach((game, index) => {
+    if (index < 6) {
+      articles += `
+        <a class="card" href="#detail/${game.id}">`;
+    } else {
+      articles += `
+        <a class="card hide" href="#detail/${game.id}">`;
+    }
     articles += `
-        <a href = "#detail/${game.id}">
           <div class="cardGame">
             <div class="infos">
               <p>${dateInString(game.released)}</p>
@@ -73,4 +79,13 @@ const fillCardGame = games => {
   return articles;
 }
 
+const showMore = () => {
+  const links = document.querySelectorAll('a .card .hide');
+  links.forEach((link, value) => {
+    if (value === 5) {
+      return;
+    }
+    link.classList.remove('hide');
+  })
+};
 export {arrayInString, arrayInLink, imagePlatforms, dateInString, fillCardGame};

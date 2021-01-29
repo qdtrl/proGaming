@@ -6,6 +6,9 @@
     flex-wrap: wrap;
     @include center-component;
     margin-bottom: 2rem;
+    a.card.hide {
+      display: none;
+    }
     .cardGame {
       display: flex;
       flex-direction: column;
