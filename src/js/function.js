@@ -91,7 +91,7 @@ const showMore = (e) => {
     link.classList.remove('hide');
   })
   if (links.length === 9) {
-    document.querySelector('.show').innerHTML= "";
+    document.querySelector('section .button').innerHTML= "";
   }
 };
 

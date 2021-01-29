@@ -36,7 +36,9 @@ const Home = (argument = "") => {
         </div>
       </div>
     </section>
-    <button class="show">+</button>
+    <section class="button">
+        <button class="show">+</button>
+    </section>
     `;
     preparePage();
   };

@@ -34,18 +34,23 @@ main {
   width: 100vw;
 }
 
-button.show {
-  left: 20vw;
+section.button {
+  position: fixed;
   bottom: 1rem;
+  left: 1rem;
+  button.show {
 
-  width: 20%;
-  padding: 10px;
-  background: $secondary-color;
-  color: $primary-color;
-  font-size: 17px;
-  border: 1px solid $secondary-color;
-  border-left: none;
-  cursor: pointer;
+    width: 40px;
+    padding: 9px;
+    background: $secondary-color;
+    color: $primary-color;
+    font-size: 17px;
+    border: 1px solid $secondary-color;
+    border-left: none;
+    cursor: pointer;
+
+  }
+
 }
 
 footer {
