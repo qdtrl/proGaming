@@ -4,8 +4,7 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    width: 80vw;
-    margin-left: 10%;
+    @include center-component;
     margin-bottom: 2rem;
     .cardGame {
       display: flex;
@@ -13,7 +12,7 @@
       width: 420px;
       bottom: 1rem;
       left: 1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 2.4rem;
       &:hover {
         img.game {
           visibility: hidden;

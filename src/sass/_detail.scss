@@ -5,7 +5,7 @@
   }
   a {
     padding: 12px 20px;
-    background-color: #cc0000;
+    background-color: $date-color;
     position: absolute;
     bottom: 6rem;
     right: 6rem;
@@ -25,7 +25,7 @@ section.details {
     margin-bottom: 2rem;
     p {
       font-size: 2rem;
-      color: #cc0000;      ;
+      color: $date-color;      ;
     }
   }
   h1 {
@@ -34,7 +34,7 @@ section.details {
 
   h2 {
     text-transform: uppercase;
-    color: #cc0000;    ;
+    color: $date-color;    ;
     font-weight: 600;
     font-size: 2rem;
     margin-top: 2rem;
@@ -57,13 +57,9 @@ section.details {
     }
   }
   div.about {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include flex-row;
     div.half {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      @include flex-row;
       width: 60%;
       div {
         width: 50%;
@@ -72,9 +68,10 @@ section.details {
   }
 
   div.types {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include flex-row;
+    a:hover {
+      color: $secondary-color;
+    }
     div.tags {
       width: 60%;
     }
@@ -94,20 +91,50 @@ section.details {
     h2 {
       position: absolute;
     }
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 80vw;
-    margin-left: 10%;
+    @include flex-wrap;
+    @include center-component;
     .cardGame{
       width: 420px;
       margin-bottom: 2rem;
 
       img {
         width: 420px;
+        height: 236px;
       }
     }
   }
-  
+  section.youtube {
+    a{
+      color: $date-color;
+    }
+    .youtube {
+      @include flex-wrap-between;
+      width: 100%;
+      div.cardYoutube {
+        width: 320px;
+      }
+    }
+    p {
+      color: $date-color;
+    }
+    h3 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    div.big {
+      @include flex-wrap-between;
+      margin-bottom: 2rem;
+      h3 {
+        font-size: 1.5rem;
+      }
+      img {
+        width: 55%;
+        margin-right: 5%;
+      }
+      div {
+        width: 40%;
+      }
+    }
+  }
 
 }

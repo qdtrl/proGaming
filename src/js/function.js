@@ -3,8 +3,15 @@ const arrayInString = array => {
   array.forEach(string => {
     longString += `${string.name}, `
   });
-  
   return longString.substr(0, longString.length - 2);
+}
+
+const arrayInLink = array => {
+  let longString = ""
+  array.forEach(string => {
+    longString += `<a href="#search/${string.slug}">${string.name}, </a>`
+  });
+  return longString + '...';
 }
 
 const imagePlatforms = platforms => {
@@ -45,7 +52,7 @@ const fillCardGame = games => {
   let articles = "";
   games.forEach((game) => {
     articles += `
-        <a href = "#pagedetail/${game.id}">
+        <a href = "#detail/${game.id}">
           <div class="cardGame">
             <div class="infos">
               <p>${dateInString(game.released)}</p>
@@ -66,4 +73,4 @@ const fillCardGame = games => {
   return articles;
 }
 
-export {arrayInString, imagePlatforms, dateInString, fillCardGame};
+export {arrayInString, arrayInLink, imagePlatforms, dateInString, fillCardGame};

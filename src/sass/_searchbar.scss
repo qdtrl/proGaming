@@ -1,0 +1,32 @@
+form {
+  display: flex;
+  width: 600px;
+  input[type=search] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid $secondary-color;
+    width: 80%;
+    background: #f1f1f1;
+  }
+
+  button {
+    width: 20%;
+    padding: 10px;
+    background: $secondary-color;
+    color: $primary-color;
+    font-size: 17px;
+    border: 1px solid $secondary-color;
+    border-left: none;
+    cursor: pointer;
+  }
+  
+  &:hover {
+  background: $date-color;
+  }
+  
+  &::after {
+  content: "";
+  clear: both;
+  display: table;
+  }
+}

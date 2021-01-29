@@ -4,8 +4,8 @@ import {Home} from './home';
 
 const routes = {
   "": Home,
-  "pagelist": SearchPage,
-  "pagedetail": PageDetail,
+  "search": SearchPage,
+  "detail": PageDetail,
 };
 
 export {routes};

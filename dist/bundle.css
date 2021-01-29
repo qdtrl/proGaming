@@ -70,6 +70,10 @@
   color: #ff652f;
   font-weight: 700;
 }
+.jumbotron div {
+  display: flex;
+  justify-content: center;
+}
 
 .menu-btn {
   position: absolute;
@@ -201,7 +205,7 @@
   width: 420px;
   bottom: 1rem;
   left: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2.4rem;
 }
 .page-list .articles .cardGame:hover img.game {
   visibility: hidden;
@@ -316,6 +320,9 @@ section.details div.types {
   flex-direction: row;
   justify-content: space-between;
 }
+section.details div.types a:hover {
+  color: #ff652f;
+}
 section.details div.types div.tags {
   width: 60%;
 }
@@ -342,6 +349,72 @@ section.details div.screenshots .cardGame {
 }
 section.details div.screenshots .cardGame img {
   width: 420px;
+  height: 236px;
+}
+section.details section.youtube a {
+  color: #cc0000;
+}
+section.details section.youtube .youtube {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+section.details section.youtube .youtube div.cardYoutube {
+  width: 320px;
+}
+section.details section.youtube p {
+  color: #cc0000;
+}
+section.details section.youtube h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+section.details section.youtube div.big {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+section.details section.youtube div.big h3 {
+  font-size: 1.5rem;
+}
+section.details section.youtube div.big img {
+  width: 55%;
+  margin-right: 5%;
+}
+section.details section.youtube div.big div {
+  width: 40%;
+}
+
+form {
+  display: flex;
+  width: 600px;
+}
+form input[type=search] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid #ff652f;
+  width: 80%;
+  background: #f1f1f1;
+}
+form button {
+  width: 20%;
+  padding: 10px;
+  background: #ff652f;
+  color: #272727;
+  font-size: 17px;
+  border: 1px solid #ff652f;
+  border-left: none;
+  cursor: pointer;
+}
+form:hover {
+  background: #cc0000;
+}
+form::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 body {
